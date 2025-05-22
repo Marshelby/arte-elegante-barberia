@@ -1,15 +1,20 @@
 .navbar {
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
-  padding: 1rem 2rem;
   background-color: #111;
+  z-index: 9999;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 9999;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  flex-wrap: nowrap;
   overflow-x: auto;
 }
 
@@ -26,18 +31,18 @@
   font-size: 1.8rem;
   color: white;
   cursor: pointer;
+  margin-left: auto;
 }
 
 .navbar-links {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  gap: 1.2rem;
   margin: 0;
   padding: 0;
   white-space: nowrap;
   overflow-x: auto;
-  flex-grow: 1;
-  justify-content: flex-end;
+  flex-shrink: 0;
 }
 
 .navbar-links li {

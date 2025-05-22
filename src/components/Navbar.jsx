@@ -9,19 +9,21 @@ function Navbar() {
 
   return (
     <nav className="navbar">
-      <div className="navbar-logo">Arte Elegante</div>
+      <div className="navbar-container">
+        <div className="navbar-logo">Arte Elegante</div>
 
-      <div className="menu-toggle" onClick={handleToggle}>
-        ☰
+        <div className="menu-toggle" onClick={handleToggle}>
+          ☰
+        </div>
+
+        <ul className={`navbar-links ${menuOpen ? 'active' : ''}`}>
+          <li><a href="#inicio" onClick={handleLinkClick}>Inicio</a></li>
+          <li><a href="#galeria" onClick={handleLinkClick}>Galería</a></li>
+          <li><a href="#servicios" onClick={handleLinkClick}>Servicios</a></li>
+          <li><a href="#agendar" onClick={handleLinkClick}>Agendar</a></li>
+          <li><a href="#contacto" onClick={handleLinkClick}>Contacto</a></li>
+        </ul>
       </div>
-
-      <ul className={`navbar-links ${menuOpen ? 'active' : ''}`}>
-        <li><a href="#inicio" onClick={handleLinkClick}>Inicio</a></li>
-        <li><a href="#galeria" onClick={handleLinkClick}>Galería</a></li>
-        <li><a href="#servicios" onClick={handleLinkClick}>Servicios</a></li>
-        <li><a href="#agendar" onClick={handleLinkClick}>Agendar</a></li>
-        <li><a href="#contacto" onClick={handleLinkClick}>Contacto</a></li>
-      </ul>
     </nav>
   );
 }

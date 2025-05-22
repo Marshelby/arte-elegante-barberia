@@ -1,4 +1,5 @@
-import './Home.css'; // 👈 Importamos estilos globales (ya movido a src/)
+import './Home.css'; // Estilos globales compartidos
+import './sections/Hero.css'; // Estilos específicos del hero
 
 import Navbar from './components/Navbar';
 import Hero from './sections/Hero';

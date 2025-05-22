@@ -3,6 +3,7 @@ import './Hero.css';
 
 const Hero = () => (
   <section id="inicio" className="hero-section">
+    <div className="hero-overlay" />
     <div className="hero-content">
       <div className="hero-icon">💈</div>
       <h1>Arte Elegante Barbershop</h1>

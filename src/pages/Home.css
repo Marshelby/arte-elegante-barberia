@@ -33,3 +33,21 @@
 .cta-button:hover {
   transform: scale(1.05);
 }
+
+.section {
+  padding: 4rem 2rem;
+  background-color: #1a1a1a;
+  color: white;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #d4af37;
+}
+
+.section p, .section li {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}

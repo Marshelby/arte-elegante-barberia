@@ -1,16 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Navbar.css';
 
 function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const handleToggle = () => setMenuOpen(!menuOpen);
+  const handleLinkClick = () => setMenuOpen(false);
+
   return (
     <nav className="navbar">
       <div className="navbar-logo">Arte Elegante</div>
-      <ul className="navbar-links">
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#galeria">Galería</a></li>
-        <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#agendar">Agendar</a></li>
-        <li><a href="#contacto">Contacto</a></li>
+
+      <div className="menu-toggle" onClick={handleToggle}>
+        ☰
+      </div>
+
+      <ul className={`navbar-links ${menuOpen ? 'active' : ''}`}>
+        <li><a href="#inicio" onClick={handleLinkClick}>Inicio</a></li>
+        <li><a href="#galeria" onClick={handleLinkClick}>Galería</a></li>
+        <li><a href="#servicios" onClick={handleLinkClick}>Servicios</a></li>
+        <li><a href="#agendar" onClick={handleLinkClick}>Agendar</a></li>
+        <li><a href="#contacto" onClick={handleLinkClick}>Contacto</a></li>
       </ul>
     </nav>
   );

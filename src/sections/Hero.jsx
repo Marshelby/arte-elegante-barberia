@@ -4,6 +4,7 @@ import './Hero.css';
 const Hero = () => (
   <section id="inicio" className="hero-section">
     <div className="hero-content">
+      <div className="hero-icon">✂</div>
       <h1>Arte Elegante Barbershop</h1>
       <p>Donde el estilo se transforma en carácter.</p>
       <a

@@ -1,11 +1,13 @@
 #root {
-  max-width: 1280px;
+  width: 100%;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-  position: relative; /* asegúrate de que respete el z-index del navbar */
+  position: relative;
   overflow-x: hidden;
 }
+
+/* Elimina el límite de ancho que estaba ocultando el último ítem */
 
 .logo {
   height: 6em;

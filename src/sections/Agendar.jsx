@@ -16,22 +16,42 @@ const Agendar = () => {
 
   return (
     <section id="agendar" className="agendar-section">
-      <h2 className="agendar-titulo">Reserva personalizada</h2>
-      <p className="agendar-subtitulo">Completa el formulario y agenda por WhatsApp con toda la info lista</p>
+      <h2 className="agendar-titulo">¡Agenda ya tu cita!</h2>
+      <p className="agendar-subtitulo">Rellena el formulario y serás redirigido automáticamente a WhatsApp con tu solicitud lista para enviar.</p>
 
       <div className="formulario">
-        <input type="text" placeholder="Tu nombre" value={nombre} onChange={(e) => setNombre(e.target.value)} />
-        <input type="date" value={fecha} onChange={(e) => setFecha(e.target.value)} />
-        <input type="time" value={hora} onChange={(e) => setHora(e.target.value)} />
-        <select value={servicio} onChange={(e) => setServicio(e.target.value)}>
-          <option value="">Selecciona un servicio</option>
-          <option value="Corte clásico">Corte clásico</option>
-          <option value="Corte fade">Corte fade</option>
-          <option value="Barba / perfilado">Barba / perfilado</option>
-          <option value="Afeitado">Afeitado</option>
-          <option value="Limpieza facial">Limpieza facial</option>
-        </select>
-        <textarea placeholder="Mensaje adicional (opcional)" value={mensaje} onChange={(e) => setMensaje(e.target.value)} />
+        <label>
+          Tu nombre
+          <input type="text" placeholder="Ej: Juan Pérez" value={nombre} onChange={(e) => setNombre(e.target.value)} />
+        </label>
+
+        <label>
+          Fecha de tu cita
+          <input type="date" value={fecha} onChange={(e) => setFecha(e.target.value)} />
+        </label>
+
+        <label>
+          Hora deseada
+          <input type="time" value={hora} onChange={(e) => setHora(e.target.value)} />
+        </label>
+
+        <label>
+          Servicio que necesitas
+          <select value={servicio} onChange={(e) => setServicio(e.target.value)}>
+            <option value="">Selecciona un servicio</option>
+            <option value="Corte clásico">Corte clásico</option>
+            <option value="Corte fade">Corte fade</option>
+            <option value="Barba / perfilado">Barba / perfilado</option>
+            <option value="Afeitado">Afeitado</option>
+            <option value="Limpieza facial">Limpieza facial</option>
+          </select>
+        </label>
+
+        <label>
+          Mensaje adicional (opcional)
+          <textarea placeholder="Ej: ¿Puedo llevar a mi hijo también?" value={mensaje} onChange={(e) => setMensaje(e.target.value)} />
+        </label>
+
         <button className="boton-reservar" onClick={enviarWhatsApp}>📲 Reservar ahora</button>
       </div>
     </section>

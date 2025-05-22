@@ -3,6 +3,8 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  position: relative; /* asegúrate de que respete el z-index del navbar */
+  overflow-x: hidden;
 }
 
 .logo {

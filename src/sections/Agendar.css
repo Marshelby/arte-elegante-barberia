@@ -1,0 +1,58 @@
+.agendar-section {
+  background-color: #111;
+  padding: 4rem 2rem;
+  text-align: center;
+  color: #fff;
+}
+
+.agendar-titulo {
+  font-size: 2.5rem;
+  color: #d4af37;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.agendar-subtitulo {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-bottom: 2.5rem;
+}
+
+.agendar-botones {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.boton-whatsapp,
+.boton-instagram {
+  padding: 1rem 1.8rem;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.boton-whatsapp {
+  background-color: #25D366;
+  color: #000;
+}
+
+.boton-whatsapp:hover {
+  background-color: #1eb954;
+  transform: scale(1.05);
+}
+
+.boton-instagram {
+  background-color: #c13584;
+  color: #fff;
+}
+
+.boton-instagram:hover {
+  background-color: #a02d6f;
+  transform: scale(1.05);
+}

@@ -1,14 +1,21 @@
-import React from 'react';
-import Home from './pages/Home';
 import Navbar from './components/Navbar';
-import './App.css';
+
+import Hero from './sections/Hero';
+import Galeria from './sections/Galeria';
+import Servicios from './sections/Servicios';
+import Agendar from './sections/Agendar';
+import Contacto from './sections/Contacto';
 
 function App() {
   return (
-    <div className="App">
+    <>
       <Navbar />
-      <Home />
-    </div>
+      <Hero />
+      <Galeria />
+      <Servicios />
+      <Agendar />
+      <Contacto />
+    </>
   );
 }
 

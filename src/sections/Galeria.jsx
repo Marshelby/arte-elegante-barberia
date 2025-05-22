@@ -21,19 +21,6 @@ const Galeria = () => (
         </div>
       ))}
     </div>
-
-    <div className="video-section">
-      <h3 className="video-titulo">Presentación Arte Elegante</h3>
-      <div className="video-container">
-        <iframe
-          src="https://www.youtube.com/embed/YTu8J2L7Qfc"
-          title="Presentación Barbería"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        ></iframe>
-      </div>
-    </div>
   </section>
 );
 

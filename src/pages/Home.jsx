@@ -5,21 +5,23 @@ function Home() {
   return (
     <main>
       {/* INICIO */}
-      <section id="inicio" className="home-container">
-        <header className="hero">
-          <h1>Arte Elegante Barbershop</h1>
-          <p>Transformamos estilo con precisión y carácter.</p>
-          <a href="https://wa.me/56937711681" target="_blank" className="cta-button" rel="noreferrer">
-            Agendar Cita
-          </a>
-        </header>
+      <section id="inicio" className="hero">
+        <h1>Arte Elegante Barbershop</h1>
+        <p>Transformamos estilo con precisión y carácter.</p>
+        <a href="https://wa.me/56937711681" target="_blank" className="cta-button" rel="noreferrer">
+          Agendar Cita
+        </a>
       </section>
+
+      <div className="divider"></div>
 
       {/* GALERÍA */}
       <section id="galeria" className="section">
         <h2>Galería de Estilos</h2>
         <p>Aquí pronto mostraremos algunos de nuestros mejores trabajos.</p>
       </section>
+
+      <div className="divider"></div>
 
       {/* SERVICIOS */}
       <section id="servicios" className="section">
@@ -32,6 +34,8 @@ function Home() {
         </ul>
       </section>
 
+      <div className="divider"></div>
+
       {/* AGENDAR */}
       <section id="agendar" className="section">
         <h2>Agenda tu cita</h2>
@@ -40,6 +44,8 @@ function Home() {
           Agendar por WhatsApp
         </a>
       </section>
+
+      <div className="divider"></div>
 
       {/* CONTACTO */}
       <section id="contacto" className="section">

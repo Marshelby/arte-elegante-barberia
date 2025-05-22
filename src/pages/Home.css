@@ -5,14 +5,15 @@ main {
 .section {
   font-family: 'Segoe UI', sans-serif;
   height: 100vh;
-  padding: 5rem 2rem;
+  padding: 3rem 2rem 2rem 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   background-color: #1a1a1a;
   color: white;
   text-align: center;
+  position: relative;
 }
 
 .hero {
@@ -53,6 +54,7 @@ main {
 
 .section h2 {
   font-size: 2.2rem;
+  margin-top: 2rem;
   margin-bottom: 1rem;
   color: #d4af37;
 }
@@ -67,6 +69,14 @@ main {
   list-style: none;
   padding: 0;
   margin: 1rem 0;
+}
+
+.divider {
+  width: 80%;
+  height: 1px;
+  background-color: #444;
+  margin: 2rem auto;
+  opacity: 0.5;
 }
 
 @media (max-width: 768px) {

@@ -10,7 +10,9 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        <div className="navbar-logo">Arte Elegante</div>
+        <div className="navbar-logo">
+          💈 <span>Arte Elegante Barbershop</span>
+        </div>
 
         <div className="menu-toggle" onClick={handleToggle}>
           ☰

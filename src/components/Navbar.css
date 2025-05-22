@@ -21,8 +21,11 @@
 .navbar-logo {
   color: #d4af37;
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   flex-shrink: 0;
 }
 
@@ -39,7 +42,7 @@
   display: flex;
   gap: 1.2rem;
   margin: 0;
-  padding: 0 1rem 0 0; /* 👈 Añadido: espacio a la derecha */
+  padding: 0 1rem 0 0;
   white-space: nowrap;
   overflow-x: auto;
   flex-shrink: 0;

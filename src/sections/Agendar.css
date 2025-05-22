@@ -1,58 +1,45 @@
-.agendar-section {
-  background-color: #111;
-  padding: 4rem 2rem;
-  text-align: center;
-  color: #fff;
-}
-
-.agendar-titulo {
-  font-size: 2.5rem;
-  color: #d4af37;
-  font-weight: bold;
-  margin-bottom: 1rem;
-}
-
-.agendar-subtitulo {
-  font-size: 1.2rem;
-  color: #ccc;
-  margin-bottom: 2.5rem;
-}
-
-.agendar-botones {
+.formulario {
+  max-width: 500px;
+  margin: 2rem auto 0;
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 1rem;
 }
 
-.boton-whatsapp,
-.boton-instagram {
-  padding: 1rem 1.8rem;
+.formulario input,
+.formulario select,
+.formulario textarea {
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
   border: none;
-  border-radius: 10px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: all 0.3s ease;
   font-size: 1rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background-color: #1c1c1c;
+  color: #fff;
+  border: 1px solid #333;
 }
 
-.boton-whatsapp {
+.formulario select {
+  appearance: none;
+}
+
+.formulario textarea {
+  resize: none;
+  height: 100px;
+}
+
+.boton-reservar {
   background-color: #25D366;
   color: #000;
+  padding: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
 }
 
-.boton-whatsapp:hover {
+.boton-reservar:hover {
   background-color: #1eb954;
-  transform: scale(1.05);
-}
-
-.boton-instagram {
-  background-color: #c13584;
-  color: #fff;
-}
-
-.boton-instagram:hover {
-  background-color: #a02d6f;
   transform: scale(1.05);
 }

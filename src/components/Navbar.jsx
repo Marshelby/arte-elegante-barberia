@@ -4,14 +4,18 @@ import './Navbar.css';
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('inicio');
+  const [scrolled, setScrolled] = useState(false);
 
   const handleToggle = () => setMenuOpen(!menuOpen);
   const handleLinkClick = () => setMenuOpen(false);
 
   useEffect(() => {
     const handleScroll = () => {
+      const scrollY = window.scrollY;
+      setScrolled(scrollY > 50);
+
       const sections = ['inicio', 'galeria', 'servicios', 'agendar', 'contacto'];
-      const scrollPosition = window.scrollY + 120;
+      const scrollPosition = scrollY + 120;
 
       for (let section of sections) {
         const el = document.getElementById(section);
@@ -23,12 +27,12 @@ function Navbar() {
     };
 
     window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Inicializa estado al cargar
+    handleScroll(); // Ejecutar al cargar
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="navbar-container">
         <div className="navbar-logo">
           💈 <span>Arte Elegante Barbershop</span>

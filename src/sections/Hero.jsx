@@ -8,7 +8,7 @@ const Hero = () => (
       <h1>Arte Elegante Barbershop</h1>
       <p>Donde el estilo se transforma en carácter.</p>
       <a
-        href="https://wa.me/56937711681?text=Hola,%20quiero%20agendar%20un%20corte%20con%20Arte%20Elegante%20Barbershop."
+        href="https://wa.me/56937711681?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20un%20corte%20en%20Arte%20Elegante%20Barbershop%20%F0%9F%93%8D"
         target="_blank"
         rel="noreferrer"
         className="cta-button"

@@ -1,0 +1,62 @@
+.footer {
+  background-color: #0a0a0a;
+  padding: 3rem 2rem;
+  text-align: center;
+  color: #eee;
+}
+
+.footer-contenido {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.footer h3 {
+  color: #d4af37;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-frase {
+  color: #ccc;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-links li a {
+  color: #d4af37;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.footer-links li a:hover {
+  color: #fff;
+}
+
+.footer-sociales a {
+  margin: 0 0.5rem;
+  font-size: 1.5rem;
+  color: #d4af37;
+  transition: transform 0.2s ease;
+}
+
+.footer-sociales a:hover {
+  transform: scale(1.2);
+  color: #ffffff;
+}
+
+.footer-copy {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #888;
+}

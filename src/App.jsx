@@ -7,6 +7,7 @@ import Galeria from './sections/Galeria';
 import Servicios from './sections/Servicios';
 import Agendar from './sections/Agendar';
 import Contacto from './sections/Contacto';
+import Footer from './sections/Footer'; // ✅ Nuevo Footer importado
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Servicios />
       <Agendar />
       <Contacto />
+      <Footer /> {/* ✅ Footer al final */}
     </>
   );
 }

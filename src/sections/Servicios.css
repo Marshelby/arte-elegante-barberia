@@ -46,5 +46,12 @@
 
 .servicio-card h3 {
   font-size: 1.2rem;
-  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.servicio-precio {
+  font-size: 1.1rem;
+  color: #d4af37;
+  font-weight: bold;
+  margin-top: 0.2rem;
 }

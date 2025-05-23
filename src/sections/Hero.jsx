@@ -5,7 +5,7 @@ const Hero = () => (
   <section id="inicio" className="hero-section">
     <div className="hero-overlay" />
     <div className="hero-content">
-      <div className="hero-icon">💈</div>
+      <img src="/img/logo-arte-elegante.png" alt="Logo Arte Elegante" className="hero-logo" />
       <h1>Arte Elegante Barbershop</h1>
       <p>Más que un buen corte, una experiencia</p>
       <a

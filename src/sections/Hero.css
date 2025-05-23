@@ -38,6 +38,19 @@
   }
 }
 
+.hero-logo {
+  max-width: 180px;
+  margin-bottom: 1.5rem;
+  animation: fadeIn 1.2s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
 .hero-icon {
   font-size: 3rem;
   color: #d4af37;
@@ -97,5 +110,9 @@
     padding: 1rem;
     width: 100%;
     max-width: 320px;
+  }
+
+  .hero-logo {
+    max-width: 140px;
   }
 }

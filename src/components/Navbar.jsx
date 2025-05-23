@@ -27,7 +27,7 @@ function Navbar() {
     };
 
     window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Ejecutar al cargar
+    handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -35,7 +35,8 @@ function Navbar() {
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="navbar-container">
         <div className="navbar-logo">
-          💈 <span>Arte Elegante Barbershop</span>
+          <img src="/img/logo-navbar.png" alt="Arte Elegante Logo" className="navbar-logo-img" />
+          <span>Arte Elegante Barbershop</span>
         </div>
 
         <div className="menu-toggle" onClick={handleToggle}>

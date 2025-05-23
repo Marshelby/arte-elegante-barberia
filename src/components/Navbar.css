@@ -34,6 +34,13 @@
   flex-shrink: 0;
 }
 
+.navbar-logo-img {
+  height: 32px;
+  width: auto;
+  margin-right: 0.5rem;
+  filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.4));
+}
+
 .menu-toggle {
   display: none;
   font-size: 1.8rem;

@@ -9,6 +9,9 @@ const servicios = [
   { nombre: 'Barba', icono: '🧔', precio: '$6.000' },
 ];
 
+const whatsappURL = (servicio) =>
+  `https://wa.me/56937711681?text=${encodeURIComponent(`Hola, me gustaría agendar el servicio: ${servicio}`)}`;
+
 const Servicios = () => (
   <section id="servicios" className="servicios-section">
     <h2 className="servicios-titulo">Servicios</h2>
@@ -25,6 +28,14 @@ const Servicios = () => (
           </div>
           <h3>{servicio.nombre}</h3>
           <p className="servicio-precio">{servicio.precio}</p>
+          <a
+            href={whatsappURL(servicio.nombre)}
+            target="_blank"
+            rel="noreferrer"
+            className="servicio-agendar"
+          >
+            Agendar este
+          </a>
         </div>
       ))}
     </div>

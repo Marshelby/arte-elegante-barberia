@@ -35,8 +35,10 @@ function Navbar() {
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="navbar-container">
         <div className="navbar-logo">
-          <img src="/img/logo-navbar.png" alt="Arte Elegante Logo" className="navbar-logo-img" />
-          <span>Arte Elegante Barbershop</span>
+          <a href="#inicio" className="navbar-logo-link">
+            <img src="/img/logo-navbar.png" alt="Arte Elegante Logo" className="navbar-logo-img" />
+            <span>Arte Elegante Barbershop</span>
+          </a>
         </div>
 
         <div className="menu-toggle" onClick={handleToggle}>

@@ -24,20 +24,25 @@
 }
 
 .navbar-logo {
-  color: #d4af37;
-  font-weight: bold;
-  font-size: 1.3rem;
-  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.navbar-logo-link {
   display: flex;
   align-items: center;
+  text-decoration: none;
+  color: #d4af37;
   gap: 0.5rem;
-  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.navbar-logo-link:hover {
+  transform: scale(1.05);
 }
 
 .navbar-logo-img {
   height: 32px;
   width: auto;
-  margin-right: 0.5rem;
   filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.4));
 }
 

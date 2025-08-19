@@ -1,3 +1,4 @@
+/* ===== Galería ===== */
 .galeria-section {
   background-color: #111;
   padding: 4rem 2rem;
@@ -10,40 +11,100 @@
   font-weight: bold;
   color: #d4af37;
   margin-bottom: 1rem;
+  letter-spacing: .5px;
 }
 
 .galeria-subtitulo {
-  font-size: 1.2rem;
-  color: #ccc;
-  margin-bottom: 3rem;
+  font-size: 1.1rem;
+  color: #cfcfcf;
+  margin-bottom: 2.25rem;
 }
 
+/* Grid responsivo */
 .galeria-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-  padding: 0 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+  padding: 0 .5rem;
 }
 
+/* Tarjeta de imagen */
 .galeria-item {
+  position: relative;
   overflow: hidden;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 14px;
+  background: #1a1a1a;
+  box-shadow: 0 6px 18px rgba(0,0,0,.45);
+  transition: transform .28s ease, box-shadow .28s ease, outline-color .28s ease;
+  /* Mantener proporción uniforme en todas las miniaturas */
+  aspect-ratio: 16 / 10;
 }
 
+/* Imagen */
 .galeria-item img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;      /* que no se deforme */
   display: block;
-  transition: transform 0.3s ease;
+  transition: transform .32s ease;
 }
 
+/* Sutileza de brillo al pasar el mouse */
 .galeria-item:hover {
-  transform: scale(1.03);
-  box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(212, 175, 55, .35);
 }
 
+/* Zoom suave en la imagen */
 .galeria-item:hover img {
-  transform: scale(1.05);
+  transform: scale(1.045);
+}
+
+/* Gradiente inferior para legibilidad del texto */
+.galeria-item::after {
+  content: "";
+  position: absolute;
+  inset: 0 0 0 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 55%, rgba(0,0,0,.65) 100%);
+  opacity: .9;
+  pointer-events: none;
+}
+
+/* Rótulo “Estilo X” */
+.galeria-texto {
+  position: absolute;
+  left: 0; right: 0; bottom: .35rem;
+  padding: .35rem .9rem;
+  font-weight: 600;
+  font-size: .95rem;
+  color: #fff;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Pequeno marcador dorado decorativo */
+.galeria-texto::before {
+  content: "✦";
+  color: #d4af37;
+  margin-right: .5rem;
+  font-size: .95rem;
+  opacity: .95;
+}
+
+/* Accesibilidad: foco con borde dorado */
+.galeria-item:focus-within,
+.galeria-item:focus {
+  outline: 2px solid #d4af37;
+  outline-offset: 2px;
+}
+
+/* Ajustes responsive */
+@media (max-width: 480px) {
+  .galeria-section { padding: 3rem 1rem; }
+  .galeria-titulo { font-size: 2rem; }
+  .galeria-grid { gap: 1rem; }
+  .galeria-item { border-radius: 12px; }
+  .galeria-texto { font-size: .9rem; }
 }

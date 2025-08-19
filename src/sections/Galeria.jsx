@@ -18,6 +18,7 @@ const Galeria = () => (
       {imagenes.map((src, idx) => (
         <div className="galeria-item" key={idx}>
           <img src={src} alt={`Estilo ${idx + 1}`} />
+          <p className="galeria-texto">Estilo {idx + 1}</p>
         </div>
       ))}
     </div>

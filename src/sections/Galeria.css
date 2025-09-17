@@ -8,16 +8,17 @@
 
 .galeria-titulo {
   font-size: 2.5rem;
-  font-weight: bold;
+  font-weight: 800;
   color: #d4af37;
   margin-bottom: 1rem;
-  letter-spacing: .5px;
+  letter-spacing: .4px;
 }
 
 .galeria-subtitulo {
   font-size: 1.1rem;
   color: #cfcfcf;
   margin-bottom: 2.25rem;
+  font-weight: 500;
 }
 
 /* Grid responsivo */
@@ -36,8 +37,7 @@
   background: #1a1a1a;
   box-shadow: 0 6px 18px rgba(0,0,0,.45);
   transition: transform .28s ease, box-shadow .28s ease, outline-color .28s ease;
-  /* Mantener proporción uniforme en todas las miniaturas */
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 16 / 10; /* proporción uniforme */
 }
 
 /* Imagen */
@@ -49,13 +49,12 @@
   transition: transform .32s ease;
 }
 
-/* Sutileza de brillo al pasar el mouse */
+/* Hover */
 .galeria-item:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 28px rgba(212, 175, 55, .35);
 }
 
-/* Zoom suave en la imagen */
 .galeria-item:hover img {
   transform: scale(1.045);
 }
@@ -70,21 +69,24 @@
   pointer-events: none;
 }
 
-/* Rótulo “Estilo X” */
+/* Rótulo “Estilo X” con mejor tipografía/legibilidad */
 .galeria-texto {
   position: absolute;
   left: 0; right: 0; bottom: .35rem;
   padding: .35rem .9rem;
-  font-weight: 600;
-  font-size: .95rem;
+  font-weight: 700;
+  font-size: .98rem;
+  line-height: 1.2;
   color: #fff;
   z-index: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  letter-spacing: .2px;
+  text-shadow: 0 1px 2px rgba(0,0,0,.55);
 }
 
-/* Pequeno marcador dorado decorativo */
+/* Pequeño marcador dorado decorativo */
 .galeria-texto::before {
   content: "✦";
   color: #d4af37;
@@ -106,5 +108,5 @@
   .galeria-titulo { font-size: 2rem; }
   .galeria-grid { gap: 1rem; }
   .galeria-item { border-radius: 12px; }
-  .galeria-texto { font-size: .9rem; }
+  .galeria-texto { font-size: .92rem; }
 }

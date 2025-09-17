@@ -36,7 +36,11 @@ function Navbar() {
       <div className="navbar-container">
         <div className="navbar-logo">
           <a href="#inicio" className="navbar-logo-link">
-            <img src="/img/logo-navbar.png" alt="Arte Elegante Logo" className="navbar-logo-img" />
+            <img
+              src="/img/logo-navbar.png"
+              alt="Logo Arte Elegante Barbería"
+              className="navbar-logo-img"
+            />
             <span>Arte Elegante Barbershop</span>
           </a>
         </div>

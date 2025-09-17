@@ -5,10 +5,11 @@ import Navbar from './components/Navbar';
 import Hero from './sections/Hero';
 import Galeria from './sections/Galeria';
 import Servicios from './sections/Servicios';
+import Confianza from './sections/Confianza'; // ✅ Nueva sección
 import Agendar from './sections/Agendar';
 import Contacto from './sections/Contacto';
 import Footer from './sections/Footer';
-import WhatsAppFloat from './components/WhatsAppFloat'; // ✅ Nuevo import
+import WhatsAppFloat from './components/WhatsAppFloat'; // ✅ Botón flotante
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Hero />
       <Galeria />
       <Servicios />
+      <Confianza />   {/* ✅ Nueva sección de testimonios */}
       <Agendar />
       <Contacto />
       <Footer />

@@ -9,6 +9,16 @@ const Agendar = () => {
   const [mensaje, setMensaje] = useState('');
 
   const enviarWhatsApp = () => {
+    // Evento GA4 antes de abrir WhatsApp
+    if (window.gtag) {
+      window.gtag('event', 'booking_request', {
+        name: nombre || '(sin nombre)',
+        date: fecha || '(sin fecha)',
+        time: hora || '(sin hora)',
+        service_name: servicio || '(sin servicio)',
+      });
+    }
+
     const texto = `Hola, soy ${nombre}. Quiero un ${servicio} el ${fecha} a las ${hora}. ${mensaje ? 'Mensaje adicional: ' + mensaje : ''}`;
     const url = `https://wa.me/56937711681?text=${encodeURIComponent(texto)}`;
     window.open(url, '_blank');

@@ -12,6 +12,12 @@ const servicios = [
 const whatsappURL = (servicio) =>
   `https://wa.me/56937711681?text=${encodeURIComponent(`Hola, me gustaría agendar el servicio: ${servicio}`)}`;
 
+const trackServicio = (nombre) => {
+  if (window.gtag) {
+    window.gtag('event', 'booking_interest', { service_name: nombre });
+  }
+};
+
 const Servicios = () => (
   <section id="servicios" className="servicios-section">
     <h2 className="servicios-titulo">Servicios</h2>
@@ -33,6 +39,7 @@ const Servicios = () => (
             target="_blank"
             rel="noreferrer"
             className="servicio-agendar"
+            onClick={() => trackServicio(servicio.nombre)}
           >
             Agendar este
           </a>

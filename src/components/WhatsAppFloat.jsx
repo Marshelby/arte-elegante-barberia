@@ -6,6 +6,14 @@ const MSG = "Hola, quiero reservar una cita ✂️";
 const WA_LINK = `https://wa.me/${PHONE}?text=${encodeURIComponent(MSG)}`;
 
 export default function WhatsAppFloat() {
+  const handleClick = () => {
+    if (window.gtag) {
+      window.gtag("event", "click_whatsapp", {
+        location: "float_button",
+      });
+    }
+  };
+
   return (
     <a
       href={WA_LINK}
@@ -13,6 +21,7 @@ export default function WhatsAppFloat() {
       rel="noreferrer"
       aria-label="Abrir WhatsApp"
       className="wsp-float"
+      onClick={handleClick}
     >
       {/* Ícono WhatsApp (SVG sin dependencias) */}
       <svg viewBox="0 0 32 32" aria-hidden="true" className="wsp-icon">

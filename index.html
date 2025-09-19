@@ -2,10 +2,7 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Arte Elegante Barbería – Barbería en Quilpué | Fades, diseños y estilo</title>
 
@@ -15,7 +12,7 @@
       content="Especialistas en fades, diseños y barbería masculina. Reserva tu hora en Arte Elegante Barbería – Estilo y detalle en cada corte."
     />
 
-    <!-- (Opcional) Keywords: hoy casi no influyen en Google, pero no molestan -->
+    <!-- (Opcional) Keywords -->
     <meta
       name="keywords"
       content="Barbería en Quilpué, Barbería Quilpué, Barbería Valparaíso, Corte degradado, Fade, Diseño en el pelo, Barba, Perfilado"
@@ -28,7 +25,6 @@
       property="og:description"
       content="Especialistas en fades, diseños y barbería masculina. Reserva tu hora en Arte Elegante Barbería – Estilo y detalle en cada corte."
     />
-    <!-- Sube una imagen 1200x630 aprox. y ajusta la ruta si usas otra -->
     <meta property="og:image" content="/img/og-cover.jpg" />
     <meta property="og:url" content="https://arte-elegante-barberia.vercel.app/" />
     <meta property="og:locale" content="es_CL" />
@@ -44,6 +40,39 @@
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/img/favicon.png" />
+
+    <!-- Schema.org – Barbershop -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Barbershop",
+      "name": "Arte Elegante Barbería",
+      "url": "https://arte-elegante-barberia.vercel.app/",
+      "image": "https://arte-elegante-barberia.vercel.app/img/og-cover.jpg",
+      "logo": "https://arte-elegante-barberia.vercel.app/img/logo-arte-elegante.png",
+      "telephone": "+56 9 3771 1681",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av Palmas 2108, Los Pinos",
+        "addressLocality": "Quilpué",
+        "addressRegion": "Valparaíso",
+        "addressCountry": "CL"
+      },
+      "openingHoursSpecification": [{
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"
+        ],
+        "opens": "10:00",
+        "closes": "20:00"
+      }],
+      "sameAs": [
+        "https://www.instagram.com/arteelegantebarbershop"
+      ],
+      "hasMap": "https://www.google.com/maps?q=Av.+Las+Palmas+2108,+Quilpu%C3%A9,+Valpara%C3%ADso"
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>

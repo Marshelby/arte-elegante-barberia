@@ -7,10 +7,13 @@ const WA_LINK = `https://wa.me/${PHONE}?text=${encodeURIComponent(MSG)}`;
 
 export default function WhatsAppFloat() {
   const handleClick = () => {
+    // GA4
     if (window.gtag) {
-      window.gtag("event", "click_whatsapp", {
-        location: "float_button",
-      });
+      window.gtag("event", "click_whatsapp", { location: "float_button" });
+    }
+    // Meta Pixel
+    if (window.fbq) {
+      window.fbq("trackCustom", "ClickWhatsApp", { location: "float_button" });
     }
   };
 

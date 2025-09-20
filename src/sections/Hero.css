@@ -2,10 +2,9 @@
   position: relative;
   min-height: 100vh;
 
-  /* Fondo optimizado con image-set: AVIF → WebP → JPG */
+  /* Fondo optimizado: WebP (siempre que se pueda) con fallback JPG */
   background-color: #0a0a0a; /* color de respaldo */
   background-image: image-set(
-    url('/img/hero-bg.avif') type('image/avif'),
     url('/img/hero-bg.webp') type('image/webp'),
     url('/img/hero-bg.jpg') type('image/jpeg')
   );
@@ -110,7 +109,7 @@
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
 }
 
-/* MOBILE ADJUSTMENTS */
+/* MOBILE */
 @media (max-width: 768px) {
   .hero-content h1 {
     font-size: 2rem;

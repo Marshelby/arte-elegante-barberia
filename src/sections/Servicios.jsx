@@ -16,6 +16,9 @@ const trackServicio = (nombre) => {
   if (window.gtag) {
     window.gtag('event', 'booking_interest', { service_name: nombre });
   }
+  if (window.fbq) {
+    window.fbq('trackCustom', 'BookingInterest', { service_name: nombre });
+  }
 };
 
 const Servicios = () => (
@@ -27,7 +30,18 @@ const Servicios = () => (
         <div key={idx} className="servicio-card">
           <div className="servicio-icono">
             {servicio.icono === 'cejas' ? (
-              <img src="/img/cejas.png" alt="Cejas" className="icono-img" />
+              <picture>
+                <source srcSet="/img/cejas.avif" type="image/avif" />
+                <source srcSet="/img/cejas.webp" type="image/webp" />
+                <img
+                  src="/img/cejas.png"
+                  alt="Cejas"
+                  className="icono-img"
+                  width="64"
+                  height="64"
+                  loading="lazy"
+                />
+              </picture>
             ) : (
               servicio.icono
             )}

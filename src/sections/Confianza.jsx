@@ -5,12 +5,12 @@ const testimonios = [
   {
     nombre: "Cristóbal",
     texto: "Salí impecable. Detalle y buena conversación.",
-    img: "/img/testimonio1.png", // ← placeholder; luego reemplazas por foto real
+    base: "testimonio1", // base del archivo, generaremos testimonio1.webp y testimonio1.avif
   },
   {
     nombre: "Valentina",
     texto: "Llevé a mi hijo, quedaron perfectos los degradés.",
-    img: "/img/testimonio2.png", // ← placeholder; luego reemplazas por foto real
+    base: "testimonio2",
   },
 ];
 
@@ -49,12 +49,18 @@ const Confianza = () => (
       {testimonios.map((t, idx) => (
         <div className="confianza-card" key={idx}>
           <div className="confianza-img-container">
-            <img
-              src={t.img}
-              alt={`Foto de ${t.nombre} – Cliente de Arte Elegante`}
-              className="confianza-img"
-              loading="lazy"
-            />
+            <picture>
+              <source srcSet={`/img/${t.base}.avif`} type="image/avif" />
+              <source srcSet={`/img/${t.base}.webp`} type="image/webp" />
+              <img
+                src={`/img/${t.base}.png`}
+                alt={`Foto de ${t.nombre} – Cliente de Arte Elegante`}
+                className="confianza-img"
+                loading="lazy"
+                width="200"
+                height="200"
+              />
+            </picture>
           </div>
           <p className="confianza-texto">“{t.texto}”</p>
           <p className="confianza-nombre">— {t.nombre}</p>

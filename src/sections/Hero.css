@@ -2,15 +2,8 @@
   position: relative;
   min-height: 100vh;
 
-  /* Fondo optimizado: WebP (siempre que se pueda) con fallback JPG */
-  background-color: #0a0a0a; /* color de respaldo */
-  background-image: image-set(
-    url('/img/hero-bg.webp') type('image/webp'),
-    url('/img/hero-bg.jpg') type('image/jpeg')
-  );
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  /* Fondo sólido negro elegante */
+  background-color: #0a0a0a;
 
   display: flex;
   justify-content: center;

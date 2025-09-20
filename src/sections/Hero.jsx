@@ -20,8 +20,6 @@ const Hero = () => {
       <div className="hero-content">
         {/* LOGO con formatos modernos + fallback */}
         <picture>
-          {/* AVIF (opcional; si no existe, el navegador ignora y cae a WebP/PNG) */}
-          <source srcSet="/img/logo-arte-elegante.avif" type="image/avif" />
           {/* WebP */}
           <source srcSet="/img/logo-arte-elegante.webp" type="image/webp" />
           {/* Fallback PNG */}

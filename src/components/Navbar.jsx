@@ -36,14 +36,17 @@ function Navbar() {
       <div className="navbar-container">
         <a href="#inicio" className="navbar-brand" onClick={handleLinkClick}>
           <picture>
-            <source srcSet="/img/logo-arte-elegante.webp" type="image/webp" />
+            {/* principal en WebP transparente */}
+            <source srcSet="/img/logo-arte-elegante-navbar.webp" type="image/webp" />
+            {/* fallback PNG transparente */}
             <img
-              src="/img/logo-arte-elegante.png"
+              src="/img/logo-arte-elegante-navbar.png"
               alt="Logo Arte Elegante Barbería"
               className="navbar-logo-img"
               width="160"
               height="160"
               loading="eager"
+              decoding="async"
             />
           </picture>
           <span className="brand-text">Arte Elegante Barbershop</span>

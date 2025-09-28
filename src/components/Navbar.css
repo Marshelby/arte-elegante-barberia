@@ -29,14 +29,14 @@
 }
 
 .navbar-logo-img {
-  height: 46px;      /* controla alto del logo */
+  height: 46px;      /* controla alto del logo en navbar */
   width: auto;       /* mantiene proporción */
   display: block;
   object-fit: contain;
 }
 
 .brand-text {
-  color: #e6c56e;    /* tu dorado */
+  color: #e6c56e;    /* dorado de marca */
   font-weight: 600;
   font-size: 1rem;
   white-space: nowrap;

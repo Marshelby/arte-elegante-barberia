@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <g stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M18 24c0-8 6-14 14-14s14 6 14 14" />
+    <path d="M46 24c0 8-6 14-14 14" />
+    <path d="M40 44c-6 0-12 4-14 10" />
+    <!-- “fade” a líneas finas hacia la nuca -->
+    <path d="M32 38h8" opacity="0.8"/>
+    <path d="M32 41h6" opacity="0.6"/>
+    <path d="M32 44h4" opacity="0.4"/>
+    <path d="M32 47h2" opacity="0.25"/>
+  </g>
+</svg>

@@ -9,17 +9,17 @@ const onHeroCTA = () => {
 const Hero = () => {
   return (
     <section id="inicio" className="hero-section">
-      <div className="hero-overlay" />
-
       <div className="hero-content">
+        {/* TIP: si quieres probar el modo que intenta “quitar” el negro del logo,
+           agrega la clase extra 'hero-logo--knockout' al <img> de abajo. */}
         <picture>
           <source srcSet="/img/logo-arte-elegante.webp" type="image/webp" />
           <img
             src="/img/logo-arte-elegante.png"
             alt="Logo Arte Elegante Barbería"
             className="hero-logo"
-            width="360"
-            height="360"
+            width="600"
+            height="600"
             loading="eager"
           />
         </picture>

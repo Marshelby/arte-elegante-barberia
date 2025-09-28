@@ -5,7 +5,7 @@ const testimonios = [
   {
     nombre: "Cristóbal",
     texto: "Salí impecable. Detalle y buena conversación.",
-    base: "testimonio1", // base del archivo, generaremos testimonio1.webp y testimonio1.avif
+    base: "testimonio1",
   },
   {
     nombre: "Valentina",
@@ -14,7 +14,7 @@ const testimonios = [
   },
 ];
 
-// Mini íconos SVG dorados
+/* Mini íconos SVG dorados */
 const Icon = {
   Clean: () => (
     <svg viewBox="0 0 24 24" className="confianza-ico" aria-hidden="true">
@@ -33,12 +33,26 @@ const Icon = {
   ),
 };
 
+/* Medalla dorada de primer lugar */
+const MedalIcon = () => (
+  <svg className="medal-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+    <path
+      fill="currentColor"
+      d="M400 0H176L96 160h384L400 0zm176 208c0 97.2-78.8 176-176 176s-176-78.8-176-176 78.8-176 176-176 176 78.8 176 176zM352 96v64h-32V96h32zm-40 208h48c8.8 0 16-7.2 16-16V224h-32v64h-32v16zm144 0v-16h-32v-64h-32v64c0 8.8 7.2 16 16 16h48zm-88-32V96h-32v176h32zm-88-32h32v-64h-32v64z"
+    />
+  </svg>
+);
+
 const Confianza = () => (
   <section id="confianza" className="confianza-section">
-    <h2 className="confianza-titulo">Lo que dicen nuestros clientes</h2>
+    <div className="confianza-title-wrap">
+      <MedalIcon />
+      <h2 className="confianza-titulo">Lo que dicen nuestros clientes</h2>
+      <MedalIcon />
+    </div>
     <p className="confianza-subtitulo">Experiencias reales en Arte Elegante Barbershop</p>
 
-    {/* Franja de iconos de confianza */}
+    {/* Franja de iconos */}
     <div className="confianza-icons">
       <div className="confianza-pill"><Icon.Clean /> Higiene impecable</div>
       <div className="confianza-pill"><Icon.Time /> Puntualidad</div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import './Servicios.css';
 
-/* Farol clásico de barbería (solo estilos CSS) */
+/* ========== Farol clásico (luces) ========== */
 const BarberPole = () => (
   <div className="barber-pole" aria-hidden="true">
     <div className="bp-cap bp-cap--top" />
@@ -13,6 +13,24 @@ const BarberPole = () => (
   </div>
 );
 
+/* ========== Ícono/imagen de Cejas con fallback WebP → PNG ========== */
+const CejasIcon = () => {
+  return (
+    <picture>
+      <source srcSet="/img/cejas.webp" type="image/webp" />
+      <img
+        src="/img/cejas.png"
+        alt="Cejas"
+        className="icono-img"
+        width="64"
+        height="64"
+        loading="lazy"
+      />
+    </picture>
+  );
+};
+
+/* ========== Datos ========== */
 const servicios = [
   { nombre: 'Corte con shaver', icono: '💈', precio: '$10.000' },
   { nombre: 'Corte clásico', icono: '💇‍♂️', precio: '$8.000' },
@@ -31,6 +49,7 @@ const trackServicio = (nombre) => {
   if (window.fbq) window.fbq('trackCustom', 'BookingInterest', { service_name: nombre });
 };
 
+/* ========== Vista ========== */
 const Servicios = () => (
   <section id="servicios" className="servicios-section">
     <div className="servicios-titulo-wrap">
@@ -46,34 +65,21 @@ const Servicios = () => (
     </p>
 
     <div className="servicios-grid">
-      {servicios.map((servicio, idx) => (
+      {servicios.map((s, idx) => (
         <div key={idx} className="servicio-card">
-          <div className="servicio-icono">
-            {servicio.icono === 'cejas' ? (
-              <picture>
-                <source srcSet="/img/cejas.avif" type="image/avif" />
-                <source srcSet="/img/cejas.webp" type="image/webp" />
-                <img
-                  src="/img/cejas.png"
-                  alt="Cejas"
-                  className="icono-img"
-                  width="64"
-                  height="64"
-                  loading="lazy"
-                />
-              </picture>
-            ) : (
-              servicio.icono
-            )}
+          <div className="servicio-icono" aria-hidden={s.icono !== 'cejas'}>
+            {s.icono === 'cejas' ? <CejasIcon /> : s.icono}
           </div>
-          <h3>{servicio.nombre}</h3>
-          <p className="servicio-precio">{servicio.precio}</p>
+
+          <h3>{s.nombre}</h3>
+          <p className="servicio-precio">{s.precio}</p>
+
           <a
-            href={whatsappURL(servicio.nombre)}
+            href={whatsappURL(s.nombre)}
             target="_blank"
             rel="noreferrer"
             className="servicio-agendar"
-            onClick={() => trackServicio(servicio.nombre)}
+            onClick={() => trackServicio(s.nombre)}
           >
             Agendar este
           </a>

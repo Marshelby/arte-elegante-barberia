@@ -1,6 +1,18 @@
 import React from 'react';
 import './Galeria.css';
 
+/* ========== Farol clásico (luces) – mismo de Servicios ========== */
+const BarberPole = () => (
+  <div className="barber-pole" aria-hidden="true">
+    <div className="bp-cap bp-cap--top" />
+    <div className="bp-tube">
+      <div className="bp-stripes" />
+      <div className="bp-gloss" />
+    </div>
+    <div className="bp-cap bp-cap--bottom" />
+  </div>
+);
+
 const imagenes = [
   { src: '/img/corte1.png',  alt: "Diseño con letras 'Arte Elegante' en corte degradado – Barbería en Quilpué" },
   { src: '/img/corte2.png',  alt: "Degradado bajo con diseño de líneas en el lateral – Estilo urbano" },
@@ -16,8 +28,14 @@ const imagenes = [
 
 const Galeria = () => (
   <section id="galeria" className="galeria-section">
-    <h2 className="galeria-titulo">Galería de Estilos</h2>
+    <div className="galeria-titulo-wrap">
+      <BarberPole />
+      <h2 className="galeria-titulo">Galería de Estilos</h2>
+      <BarberPole />
+    </div>
+
     <p className="galeria-subtitulo">Algunos de nuestros mejores trabajos realizados</p>
+
     <div className="galeria-grid">
       {imagenes.map(({ src, alt }, idx) => (
         <figure className="galeria-item" key={idx}>

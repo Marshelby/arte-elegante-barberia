@@ -31,7 +31,6 @@ function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // WhatsApp con mensaje precargado
   const wspHref =
     'https://wa.me/56937711681?text=' +
     encodeURIComponent(
@@ -66,74 +65,58 @@ function Navbar() {
           <li><a href="#agendar" onClick={handleLinkClick} className={activeSection === 'agendar' ? 'active' : ''}>Agendar</a></li>
           <li><a href="#contacto" onClick={handleLinkClick} className={activeSection === 'contacto' ? 'active' : ''}>Contacto</a></li>
 
-          {/* --- Socials dentro del menú móvil --- */}
+          {/* Píldoras sociales dentro del menú móvil */}
           <li className="navbar-socials-mobile">
             <a
               href="https://www.instagram.com/arteelegantebarbershop/"
               target="_blank"
               rel="noreferrer noopener"
               aria-label="Instagram Arte Elegante"
-              className="social-link instagram"
+              className="social-pill instagram-pill"
               title="@arteelegantebarbershop"
               onClick={handleLinkClick}
             >
-              <svg viewBox="0 0 448 512" aria-hidden="true">
-                <path
-                  fill="currentColor"
-                  d="M224 144a112 112 0 1 0 112 112A112 112 0 0 0 224 144Zm124-41a54 54 0 0 0-54-54H154a54 54 0 0 0-54 54v140a54 54 0 0 0 54 54h140a54 54 0 0 0 54-54Zm48-41v224a102 102 0 0 1-102 102H154A102 102 0 0 1 52 344V120A102 102 0 0 1 154 18H294A102 102 0 0 1 396 120ZM336 68a20 20 0 1 0 20 20 20 20 0 0 0-20-20Z"
-                />
-              </svg>
+              <svg viewBox="0 0 448 512" aria-hidden="true"><path fill="currentColor" d="M224 144a112 112 0 1 0 112 112A112 112 0 0 0 224 144Zm124-41a54 54 0 0 0-54-54H154a54 54 0 0 0-54 54v140a54 54 0 0 0 54 54h140a54 54 0 0 0 54-54Zm48-41v224a102 102 0 0 1-102 102H154A102 102 0 0 1 52 344V120A102 102 0 0 1 154 18H294A102 102 0 0 1 396 120ZM336 68a20 20 0 1 0 20 20 20 20 0 0 0-20-20Z"/></svg>
+              <span>@arteelegantebarbershop</span>
             </a>
             <a
               href={wspHref}
               target="_blank"
               rel="noreferrer noopener"
               aria-label="WhatsApp Arte Elegante"
-              className="social-link whatsapp"
+              className="social-pill whatsapp-pill"
               title="+56 9 3771 1681"
               onClick={handleLinkClick}
             >
-              <svg viewBox="0 0 448 512" aria-hidden="true">
-                <path
-                  fill="currentColor"
-                  d="M380.9 97.1C339-9.5 208.1-32 125.2 40.6 47.5 106.2 36.2 228.7 96 311.1L80 432l118.1-30.1c70.6 39.3 160.2 24.6 217.3-35.1 60.1-62.5 53.4-163.1-10.5-220.7z"
-                />
-              </svg>
+              <svg viewBox="0 0 448 512" aria-hidden="true"><path fill="currentColor" d="M380.9 97.1C339-9.5 208.1-32 125.2 40.6 47.5 106.2 36.2 228.7 96 311.1L80 432l118.1-30.1c70.6 39.3 160.2 24.6 217.3-35.1 60.1-62.5 53.4-163.1-10.5-220.7z"/></svg>
+              <span>WhatsApp</span>
             </a>
           </li>
         </ul>
 
-        {/* --- Socials a la derecha (desktop) --- */}
-        <div className="navbar-socials">
+        {/* Píldoras sociales a la derecha (desktop) */}
+        <div className="navbar-cta">
           <a
             href="https://www.instagram.com/arteelegantebarbershop/"
             target="_blank"
             rel="noreferrer noopener"
             aria-label="Instagram Arte Elegante"
-            className="social-link instagram"
+            className="social-pill instagram-pill"
             title="@arteelegantebarbershop"
           >
-            <svg viewBox="0 0 448 512" aria-hidden="true">
-              <path
-                fill="currentColor"
-                d="M224 144a112 112 0 1 0 112 112A112 112 0 0 0 224 144Zm124-41a54 54 0 0 0-54-54H154a54 54 0 0 0-54 54v140a54 54 0 0 0 54 54h140a54 54 0 0 0 54-54Zm48-41v224a102 102 0 0 1-102 102H154A102 102 0 0 1 52 344V120A102 102 0 0 1 154 18H294A102 102 0 0 1 396 120ZM336 68a20 20 0 1 0 20 20 20 20 0 0 0-20-20Z"
-              />
-            </svg>
+            <svg viewBox="0 0 448 512" aria-hidden="true"><path fill="currentColor" d="M224 144a112 112 0 1 0 112 112A112 112 0 0 0 224 144Zm124-41a54 54 0 0 0-54-54H154a54 54 0 0 0-54 54v140a54 54 0 0 0 54 54h140a54 54 0 0 0 54-54Zm48-41v224a102 102 0 0 1-102 102H154A102 102 0 0 1 52 344V120A102 102 0 0 1 154 18H294A102 102 0 0 1 396 120ZM336 68a20 20 0 1 0 20 20 20 20 0 0 0-20-20Z"/></svg>
+            <span>@arteelegantebarbershop</span>
           </a>
           <a
             href={wspHref}
             target="_blank"
             rel="noreferrer noopener"
             aria-label="WhatsApp Arte Elegante"
-            className="social-link whatsapp"
+            className="social-pill whatsapp-pill"
             title="+56 9 3771 1681"
           >
-            <svg viewBox="0 0 448 512" aria-hidden="true">
-              <path
-                fill="currentColor"
-                d="M380.9 97.1C339-9.5 208.1-32 125.2 40.6 47.5 106.2 36.2 228.7 96 311.1L80 432l118.1-30.1c70.6 39.3 160.2 24.6 217.3-35.1 60.1-62.5 53.4-163.1-10.5-220.7z"
-              />
-            </svg>
+            <svg viewBox="0 0 448 512" aria-hidden="true"><path fill="currentColor" d="M380.9 97.1C339-9.5 208.1-32 125.2 40.6 47.5 106.2 36.2 228.7 96 311.1L80 432l118.1-30.1c70.6 39.3 160.2 24.6 217.3-35.1 60.1-62.5 53.4-163.1-10.5-220.7z"/></svg>
+            <span>WhatsApp</span>
           </a>
         </div>
       </div>

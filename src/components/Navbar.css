@@ -66,27 +66,51 @@
 .navbar-links a:hover { color: #fff; background: rgba(255,255,255,0.06); }
 .navbar-links a.active { color: #e6c56e; }
 
-/* --- Redes a la derecha (desktop) --- */
-.navbar-socials {
+/* --- Píldoras tipo GardenClean --- */
+.navbar-cta {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-.social-link {
+
+/* base pill */
+.social-pill {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
+  gap: 8px;
+  height: 38px;
+  padding: 0 14px;
   border-radius: 999px;
-  background: rgba(255,255,255,0.08);
-  color: #fff;
-  transition: background .2s ease, transform .2s ease;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1;
+  text-decoration: none;
+  background: #0f0f0f;
+  color: #f2f2f2;
+  border: 1px solid rgba(255,255,255,0.15);
+  transition: transform .15s ease, filter .15s ease, background .15s ease, border-color .15s ease;
 }
-.social-link svg { width: 18px; height: 18px; display: block; }
-.social-link:hover { background: rgba(255,255,255,0.18); transform: translateY(-1px); }
-.social-link.instagram { color: #E4405F; }
-.social-link.whatsapp  { color: #25D366; }
+.social-pill svg { width: 18px; height: 18px; }
+
+.instagram-pill {
+  border-color: #E4405F;
+  color: #ffd6df;
+}
+.instagram-pill:hover {
+  background: #E4405F;
+  color: #0b0b0b;
+  filter: none;
+}
+
+.whatsapp-pill {
+  border-color: #25D366;
+  color: #d7ffe6;
+}
+.whatsapp-pill:hover {
+  background: #25D366;
+  color: #0b0b0b;
+  filter: none;
+}
 
 /* --- Mobile --- */
 @media (max-width: 900px) {
@@ -107,25 +131,24 @@
     flex-direction: column;
     gap: 8px;
     display: none;
-    min-width: 210px;
+    min-width: 230px;
   }
   .navbar-links.active { display: flex; }
 
-  /* Oculta el bloque de la derecha en mobile (dejamos versión dentro del menú) */
-  .navbar-socials { display: none; }
+  /* ocultamos las píldoras de la derecha en mobile; usamos las del menú */
+  .navbar-cta { display: none; }
 
-  /* Socials dentro del menú móvil */
+  /* bloque social dentro del menú */
   .navbar-socials-mobile {
-    margin-top: 6px;
-    padding-top: 8px;
+    margin-top: 8px;
+    padding-top: 10px;
     border-top: 1px solid rgba(255,255,255,0.08);
-    display: flex;
-    gap: 10px;
-    justify-content: flex-start;
+    display: grid;
+    gap: 8px;
   }
-  .navbar-socials-mobile .social-link {
-    width: 34px;
-    height: 34px;
-    background: rgba(255,255,255,0.10);
+  .navbar-socials-mobile .social-pill {
+    width: 100%;
+    justify-content: center;
+    height: 40px;
   }
 }

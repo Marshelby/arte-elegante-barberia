@@ -19,128 +19,71 @@
   gap: 16px;
 }
 
-.navbar-brand {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
-}
+.navbar-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.navbar-logo-img { height: 46px; width: auto; display: block; object-fit: contain; }
+.brand-text { color: #e6c56e; font-weight: 600; font-size: 1rem; white-space: nowrap; }
 
-.navbar-logo-img {
-  height: 46px;
-  width: auto;
-  display: block;
-  object-fit: contain;
-}
-
-.brand-text {
-  color: #e6c56e;
-  font-weight: 600;
-  font-size: 1rem;
-  white-space: nowrap;
-}
-
-.menu-toggle {
-  display: none;
-  background: transparent;
-  border: 0;
-  font-size: 24px;
-  color: #fff;
-  cursor: pointer;
-}
+.menu-toggle { display: none; background: transparent; border: 0; font-size: 24px; color: #fff; cursor: pointer; }
 
 /* Links principales */
-.navbar-links {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  list-style: none;
-}
-.navbar-links a {
-  color: #ddd;
-  text-decoration: none;
-  padding: 8px 6px;
-  border-radius: 6px;
-  transition: color .15s ease, background .15s ease;
-}
+.navbar-links { display: flex; align-items: center; gap: 18px; list-style: none; }
+.navbar-links a { color: #ddd; text-decoration: none; padding: 8px 6px; border-radius: 6px; transition: color .15s ease, background .15s ease; }
 .navbar-links a:hover { color: #fff; background: rgba(255,255,255,0.06); }
 .navbar-links a.active { color: #e6c56e; }
 
-/* Píldoras (estilo GardenClean) */
-.navbar-cta {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
+/* --- Píldoras estilo GardenClean --- */
+.navbar-cta { display: flex; align-items: center; gap: 10px; }
+.socials-label { font-size: 12px; color: #cfcfcf; opacity: .9; margin-right: 6px; }
+.socials-label--desktop { margin-right: 6px; }
 
 .social-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  height: 38px;
-  padding: 0 14px;
-  border-radius: 999px;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 1;
-  text-decoration: none;
-  background: #0f0f0f;
-  color: #f2f2f2;
+  display: inline-flex; align-items: center; gap: 8px;
+  height: 38px; padding: 0 14px; border-radius: 999px;
+  font-weight: 600; font-size: 14px; line-height: 1; text-decoration: none;
+  background: #0f0f0f; color: #f2f2f2;
   border: 1px solid rgba(255,255,255,0.15);
-  transition: transform .15s ease, filter .15s ease, background .15s ease, border-color .15s ease;
+  transition: transform .15s ease, background .15s ease, border-color .15s ease;
 }
 .social-pill svg { width: 18px; height: 18px; }
 
-.instagram-pill {
-  border-color: #E4405F;
-  color: #ffd6df;
-}
-.instagram-pill:hover {
-  background: #E4405F;
-  color: #0b0b0b;
-}
+.instagram-pill { border-color: #E4405F; color: #ffd6df; }
+.instagram-pill:hover { background: #E4405F; color: #0b0b0b; }
 
-.whatsapp-pill {
-  border-color: #25D366;
-  color: #d7ffe6;
-}
-.whatsapp-pill:hover {
-  background: #25D366;
-  color: #0b0b0b;
-}
+.whatsapp-pill { border-color: #25D366; color: #d7ffe6; }
+.whatsapp-pill:hover { background: #25D366; color: #0b0b0b; }
 
 /* MOBILE */
-@media (max-width: 900px) {
-  .brand-text { display: none; }
-}
+@media (max-width: 900px) { .brand-text { display: none; } }
 
 @media (max-width: 760px) {
   .menu-toggle { display: block; }
 
   .navbar-links {
-    position: absolute;
-    top: 64px;
-    right: 16px;
+    position: absolute; top: 64px; right: 16px;
     background: rgba(0,0,0,0.95);
     border: 1px solid rgba(255,255,255,0.08);
     border-radius: 12px;
     padding: 12px;
-    flex-direction: column;
-    gap: 8px;
-    display: none;
-    min-width: 230px;
+    flex-direction: column; gap: 8px;
+    display: none; min-width: 230px;
   }
   .navbar-links.active { display: flex; }
 
-  /* ocultamos las píldoras de la derecha y mostramos las del menú */
-  .navbar-cta { display: none; }
+  .navbar-cta { display: none; } /* en mobile usamos la versión interna */
 
-  /* por defecto: ocultas en desktop, visibles SOLO en mobile */
-  .navbar-socials-mobile { display: grid; gap: 8px; margin-top: 8px; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.08); }
-  .navbar-socials-mobile .social-pill { width: 100%; justify-content: center; height: 40px; }
+  .navbar-socials-mobile {
+    display: grid; gap: 8px; margin-top: 8px; padding-top: 10px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+  .navbar-socials-mobile .socials-label {
+    font-size: 12px; color: #cfcfcf; margin: 0 0 4px 2px;
+  }
+  .navbar-socials-mobile .social-pill {
+    width: 100%; justify-content: center; height: 40px;
+  }
 }
 
-/* IMPORTANTÍSIMO: en desktop ocultar completamente las del menú móvil */
+/* asegurar que las del menú móvil no se muestren en desktop */
 @media (min-width: 761px) {
   .navbar-socials-mobile { display: none !important; }
 }

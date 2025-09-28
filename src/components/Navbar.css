@@ -1,110 +1,89 @@
 .navbar {
-  position: fixed;
+  position: sticky;
   top: 0;
   width: 100%;
-  background-color: transparent;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  z-index: 9999;
+  z-index: 999;
+  background: rgba(0,0,0,0.85);
+  backdrop-filter: saturate(120%) blur(6px);
+  transition: box-shadow 0.2s ease, background 0.2s ease;
 }
-
 .navbar.scrolled {
-  background-color: #111;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.35);
 }
 
 .navbar-container {
-  max-width: 1300px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 1rem 2rem;
+  padding: 10px 16px;
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: center;
-  flex-wrap: nowrap;
-  overflow-x: auto;
+  gap: 16px;
 }
 
-.navbar-logo {
-  flex-shrink: 0;
-}
-
-.navbar-logo-link {
+.navbar-brand {
   display: flex;
   align-items: center;
+  gap: 10px;
   text-decoration: none;
-  color: #d4af37;
-  gap: 0.5rem;
 }
 
 .navbar-logo-img {
-  height: 32px;
-  width: auto;
-  filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.4));
-  transition: transform 0.3s ease;
+  height: 46px;      /* controla alto del logo */
+  width: auto;       /* mantiene proporción */
+  display: block;
+  object-fit: contain;
 }
 
-.navbar-logo-link:hover .navbar-logo-img {
-  transform: scale(1.08);
+.brand-text {
+  color: #e6c56e;    /* tu dorado */
+  font-weight: 600;
+  font-size: 1rem;
+  white-space: nowrap;
 }
 
 .menu-toggle {
   display: none;
-  font-size: 1.8rem;
-  color: white;
+  background: transparent;
+  border: 0;
+  font-size: 24px;
+  color: #fff;
   cursor: pointer;
-  margin-left: auto;
 }
 
 .navbar-links {
-  list-style: none;
   display: flex;
-  gap: 1.2rem;
-  margin: 0;
-  padding: 0 1rem 0 0;
-  white-space: nowrap;
-  overflow-x: auto;
-  flex-shrink: 0;
-  justify-content: flex-end;
+  align-items: center;
+  gap: 18px;
+  list-style: none;
 }
-
-.navbar-links li {
-  flex-shrink: 0;
-}
-
 .navbar-links a {
-  color: white;
+  color: #ddd;
   text-decoration: none;
-  font-weight: 500;
-  transition: color 0.2s ease, border-bottom 0.2s ease;
-  padding-bottom: 2px;
+  padding: 8px 6px;
+  border-radius: 6px;
+  transition: color .15s ease, background .15s ease;
 }
+.navbar-links a:hover { color: #fff; background: rgba(255,255,255,0.06); }
+.navbar-links a.active { color: #e6c56e; }
 
-.navbar-links a:hover {
-  color: #d4af37;
-}
-
-.navbar-links a.active {
-  color: #d4af37;
-  border-bottom: 2px solid #d4af37;
-}
-
-/* Responsive */
 @media (max-width: 900px) {
-  .menu-toggle {
-    display: block;
-  }
+  .brand-text { display: none; }
+}
 
+@media (max-width: 760px) {
+  .menu-toggle { display: block; }
   .navbar-links {
     position: absolute;
-    top: 100%;
-    right: 0;
-    background-color: #111;
+    top: 64px;
+    right: 16px;
+    background: rgba(0,0,0,0.95);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    padding: 12px;
     flex-direction: column;
-    gap: 1rem;
-    padding: 1rem 2rem;
+    gap: 8px;
     display: none;
   }
-
-  .navbar-links.active {
-    display: flex;
-  }
+  .navbar-links.active { display: flex; }
 }

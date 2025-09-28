@@ -34,76 +34,29 @@ function Navbar() {
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="navbar-container">
-        <div className="navbar-logo">
-          <a href="#inicio" className="navbar-logo-link">
-            <picture>
-              {/* AVIF (opcional) */}
-              <source srcSet="/img/logo-navbar.avif" type="image/avif" />
-              {/* WebP */}
-              <source srcSet="/img/logo-navbar.webp" type="image/webp" />
-              {/* Fallback PNG */}
-              <img
-                src="/img/logo-navbar.png"
-                alt="Logo Arte Elegante Barbería"
-                className="navbar-logo-img"
-                width="160"
-                height="160"
-              />
-            </picture>
-            <span>Arte Elegante Barbershop</span>
-          </a>
-        </div>
+        <a href="#inicio" className="navbar-brand" onClick={handleLinkClick}>
+          <picture>
+            <source srcSet="/img/logo-arte-elegante.webp" type="image/webp" />
+            <img
+              src="/img/logo-arte-elegante.png"
+              alt="Logo Arte Elegante Barbería"
+              className="navbar-logo-img"
+              width="160"
+              height="160"
+              loading="eager"
+            />
+          </picture>
+          <span className="brand-text">Arte Elegante Barbershop</span>
+        </a>
 
-        <div className="menu-toggle" onClick={handleToggle}>
-          ☰
-        </div>
+        <button className="menu-toggle" onClick={handleToggle} aria-label="Abrir menú">☰</button>
 
         <ul className={`navbar-links ${menuOpen ? 'active' : ''}`}>
-          <li>
-            <a
-              href="#inicio"
-              onClick={handleLinkClick}
-              className={activeSection === 'inicio' ? 'active' : ''}
-            >
-              Inicio
-            </a>
-          </li>
-          <li>
-            <a
-              href="#galeria"
-              onClick={handleLinkClick}
-              className={activeSection === 'galeria' ? 'active' : ''}
-            >
-              Galería
-            </a>
-          </li>
-          <li>
-            <a
-              href="#servicios"
-              onClick={handleLinkClick}
-              className={activeSection === 'servicios' ? 'active' : ''}
-            >
-              Servicios
-            </a>
-          </li>
-          <li>
-            <a
-              href="#agendar"
-              onClick={handleLinkClick}
-              className={activeSection === 'agendar' ? 'active' : ''}
-            >
-              Agendar
-            </a>
-          </li>
-          <li>
-            <a
-              href="#contacto"
-              onClick={handleLinkClick}
-              className={activeSection === 'contacto' ? 'active' : ''}
-            >
-              Contacto
-            </a>
-          </li>
+          <li><a href="#inicio" onClick={handleLinkClick} className={activeSection === 'inicio' ? 'active' : ''}>Inicio</a></li>
+          <li><a href="#galeria" onClick={handleLinkClick} className={activeSection === 'galeria' ? 'active' : ''}>Galería</a></li>
+          <li><a href="#servicios" onClick={handleLinkClick} className={activeSection === 'servicios' ? 'active' : ''}>Servicios</a></li>
+          <li><a href="#agendar" onClick={handleLinkClick} className={activeSection === 'agendar' ? 'active' : ''}>Agendar</a></li>
+          <li><a href="#contacto" onClick={handleLinkClick} className={activeSection === 'contacto' ? 'active' : ''}>Contacto</a></li>
         </ul>
       </div>
     </nav>

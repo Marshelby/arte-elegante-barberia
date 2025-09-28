@@ -66,14 +66,13 @@
 .navbar-links a:hover { color: #fff; background: rgba(255,255,255,0.06); }
 .navbar-links a.active { color: #e6c56e; }
 
-/* --- Píldoras tipo GardenClean --- */
+/* Píldoras (estilo GardenClean) */
 .navbar-cta {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-/* base pill */
 .social-pill {
   display: inline-flex;
   align-items: center;
@@ -99,7 +98,6 @@
 .instagram-pill:hover {
   background: #E4405F;
   color: #0b0b0b;
-  filter: none;
 }
 
 .whatsapp-pill {
@@ -109,10 +107,9 @@
 .whatsapp-pill:hover {
   background: #25D366;
   color: #0b0b0b;
-  filter: none;
 }
 
-/* --- Mobile --- */
+/* MOBILE */
 @media (max-width: 900px) {
   .brand-text { display: none; }
 }
@@ -135,20 +132,15 @@
   }
   .navbar-links.active { display: flex; }
 
-  /* ocultamos las píldoras de la derecha en mobile; usamos las del menú */
+  /* ocultamos las píldoras de la derecha y mostramos las del menú */
   .navbar-cta { display: none; }
 
-  /* bloque social dentro del menú */
-  .navbar-socials-mobile {
-    margin-top: 8px;
-    padding-top: 10px;
-    border-top: 1px solid rgba(255,255,255,0.08);
-    display: grid;
-    gap: 8px;
-  }
-  .navbar-socials-mobile .social-pill {
-    width: 100%;
-    justify-content: center;
-    height: 40px;
-  }
+  /* por defecto: ocultas en desktop, visibles SOLO en mobile */
+  .navbar-socials-mobile { display: grid; gap: 8px; margin-top: 8px; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.08); }
+  .navbar-socials-mobile .social-pill { width: 100%; justify-content: center; height: 40px; }
+}
+
+/* IMPORTANTÍSIMO: en desktop ocultar completamente las del menú móvil */
+@media (min-width: 761px) {
+  .navbar-socials-mobile { display: none !important; }
 }

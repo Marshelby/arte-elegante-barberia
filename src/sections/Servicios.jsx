@@ -13,30 +13,25 @@ const BarberPole = () => (
   </div>
 );
 
-/* ========== Ícono/imagen de Cejas con fallback WebP → PNG ========== */
-const CejasIcon = () => {
-  return (
-    <picture>
-      <source srcSet="/img/cejas.webp" type="image/webp" />
-      <img
-        src="/img/cejas.png"
-        alt="Cejas"
-        className="icono-img"
-        width="64"
-        height="64"
-        loading="lazy"
-      />
-    </picture>
-  );
-};
+/* ========== Ícono genérico SVG ========== */
+const IconSVG = ({ name, alt }) => (
+  <img
+    src={`/img/icons/${name}.svg`}
+    alt={alt}
+    className="icono-svg"
+    width="64"
+    height="64"
+    loading="lazy"
+  />
+);
 
-/* ========== Datos ========== */
+/* ========== Datos (ya sin emojis) ========== */
 const servicios = [
-  { nombre: 'Corte con shaver', icono: '💈', precio: '$10.000' },
-  { nombre: 'Corte clásico', icono: '💇‍♂️', precio: '$8.000' },
-  { nombre: 'Corte degradado', icono: '🔥', precio: '$9.000' },
-  { nombre: 'Cejas', icono: 'cejas', precio: '$2.000' },
-  { nombre: 'Barba', icono: '🧔', precio: '$6.000' },
+  { nombre: 'Corte con shaver', icono: 'clipper', precio: '$10.000' },
+  { nombre: 'Corte clásico',   icono: 'scissors', precio: '$8.000' },
+  { nombre: 'Corte degradado', icono: 'fade',     precio: '$9.000' },
+  { nombre: 'Cejas',           icono: 'eyebrow',  precio: '$2.000' },
+  { nombre: 'Barba',           icono: 'beard',    precio: '$6.000' },
 ];
 
 const whatsappURL = (servicio) =>
@@ -49,7 +44,6 @@ const trackServicio = (nombre) => {
   if (window.fbq) window.fbq('trackCustom', 'BookingInterest', { service_name: nombre });
 };
 
-/* ========== Vista ========== */
 const Servicios = () => (
   <section id="servicios" className="servicios-section">
     <div className="servicios-titulo-wrap">
@@ -67,8 +61,8 @@ const Servicios = () => (
     <div className="servicios-grid">
       {servicios.map((s, idx) => (
         <div key={idx} className="servicio-card">
-          <div className="servicio-icono" aria-hidden={s.icono !== 'cejas'}>
-            {s.icono === 'cejas' ? <CejasIcon /> : s.icono}
+          <div className="servicio-icono" aria-hidden="true">
+            <IconSVG name={s.icono} alt={s.nombre} />
           </div>
 
           <h3>{s.nombre}</h3>

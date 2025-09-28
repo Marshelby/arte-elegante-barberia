@@ -26,8 +26,13 @@ const Icon = {
 
 const Confianza = () => (
   <section id="confianza" className="confianza-section">
-    {/* Título con medallas a los lados (por CSS) */}
-    <h2 className="confianza-titulo">Lo que dicen nuestros clientes</h2>
+    {/* Fila del título: medalla – título – medalla */}
+    <div className="confianza-title-row">
+      <span className="medalla" aria-hidden="true" />
+      <h2 className="confianza-titulo">Lo que dicen nuestros clientes</h2>
+      <span className="medalla" aria-hidden="true" />
+    </div>
+
     <p className="confianza-subtitulo">Experiencias reales en Arte Elegante Barbershop</p>
 
     {/* Franja de iconos */}

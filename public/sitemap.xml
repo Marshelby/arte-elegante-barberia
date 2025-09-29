@@ -1,34 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Página principal -->
+  <!-- Inicio -->
   <url>
-    <loc>https://arte-elegante-barberia.vercel.app/</loc>
+    <loc>https://barberiaarteelegante.cl/</loc>
     <priority>1.0</priority>
   </url>
 
-  <!-- Secciones principales -->
-  <url>
-    <loc>https://arte-elegante-barberia.vercel.app/#inicio</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://arte-elegante-barberia.vercel.app/#galeria</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://arte-elegante-barberia.vercel.app/#servicios</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://arte-elegante-barberia.vercel.app/#confianza</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://arte-elegante-barberia.vercel.app/#agendar</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://arte-elegante-barberia.vercel.app/#contacto</loc>
-    <priority>0.7</priority>
-  </url>
+  <!-- Secciones principales (usar los IDs reales de tu SPA) -->
+  <url><loc>https://barberiaarteelegante.cl/#inicio</loc><priority>0.9</priority></url>
+  <url><loc>https://barberiaarteelegante.cl/#galeria</loc><priority>0.8</priority></url>
+  <url><loc>https://barberiaarteelegante.cl/#servicios</loc><priority>0.8</priority></url>
+  <url><loc>https://barberiaarteelegante.cl/#confianza</loc><priority>0.7</priority></url>
+  <url><loc>https://barberiaarteelegante.cl/#agendar</loc><priority>0.8</priority></url>
+  <url><loc>https://barberiaarteelegante.cl/#contacto</loc><priority>0.7</priority></url>
 </urlset>

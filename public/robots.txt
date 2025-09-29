@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://arte-elegante-barberia.vercel.app/sitemap.xml
+Sitemap: https://barberiaarteelegante.cl/sitemap.xml

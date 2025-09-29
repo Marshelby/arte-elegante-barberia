@@ -4,73 +4,56 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Arte Elegante Barbershop | Barbería en Quilpué</title>
+    <title>Arte Elegante Barbería</title>
     <meta name="description" content="Arte Elegante Barbershop en Quilpué. Especialistas en fades, diseños y barbería masculina. Reserva tu hora por WhatsApp." />
     <meta name="author" content="Arte Elegante Barbershop" />
-    <meta name="theme-color" content="#0b0b0b" />
-
-    <!-- Canonical -->
-    <link rel="canonical" href="https://barberiaarteelegante.cl/" />
 
     <!-- Favicons -->
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon-180.png" />
 
-    <!-- Open Graph -->
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Arte Elegante Barbershop" />
-    <meta property="og:title" content="Arte Elegante Barbershop | Barbería en Quilpué" />
+    <!-- OG Images -->
+    <meta property="og:title" content="Arte Elegante Barbershop" />
     <meta property="og:description" content="Especialistas en fades, diseños y barbería masculina en Quilpué." />
+    <meta property="og:image" content="/img/og-cover-transparent.webp" />
+    <meta property="og:image:type" content="image/webp" />
+    <meta property="og:image:alt" content="Logo Arte Elegante Barbería" />
+    <meta name="twitter:image" content="/img/og-cover-transparent.webp" />
+
+    <!-- Fallback PNG for older clients -->
+    <link rel="preload" as="image" href="/img/og-cover-transparent.png" type="image/png" />
+
+    <!-- SEO extras -->
+    <meta property="og:type" content="website" />
     <meta property="og:url" content="https://barberiaarteelegante.cl/" />
-    <meta property="og:image" content="https://barberiaarteelegante.cl/img/og-cover.jpg" />
-    <meta property="og:image:alt" content="Logo y estética de Arte Elegante Barbershop" />
-    <meta property="og:locale" content="es_CL" />
-
-    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Arte Elegante Barbershop | Barbería en Quilpué" />
-    <meta name="twitter:description" content="Especialistas en fades, diseños y barbería masculina en Quilpué." />
-    <meta name="twitter:image" content="https://barberiaarteelegante.cl/img/og-cover.jpg" />
 
-    <!-- Preload/Prefetch (opcional) -->
-    <link rel="preload" as="image" href="/img/og-cover.jpg" imagesrcset="/img/og-cover.webp 1x" />
-    <link rel="manifest" href="/manifest.webmanifest" />
-
-    <!-- JSON-LD -->
+    <!-- Schema.org JSON-LD -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Barbershop",
       "name": "Arte Elegante Barbershop",
-      "url": "https://barberiaarteelegante.cl/",
       "image": [
-        "https://barberiaarteelegante.cl/img/og-cover.webp",
-        "https://barberiaarteelegante.cl/img/og-cover.jpg"
+        "https://barberiaarteelegante.cl/img/og-cover-transparent.webp",
+        "https://barberiaarteelegante.cl/img/og-cover-transparent.png"
       ],
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Quilpué",
-        "addressCountry": "CL"
-      },
-      "description": "Barbería en Quilpué, especialistas en fades, diseños y barbería masculina."
+      "description": "Arte Elegante Barbershop en Quilpué. Especialistas en fades, diseños y barbería masculina.",
+      "url": "https://barberiaarteelegante.cl/"
     }
     </script>
 
-    <!-- Google Analytics 4 -->
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-M2VX335339"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){ dataLayer.push(arguments); }
+      function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-M2VX335339', {
-        transport_type: 'beacon'
-        // cookie_domain: 'barberiaarteelegante.cl' // normalmente no es necesario declararlo
-      });
+
+      gtag('config', 'G-M2VX335339');
     </script>
-    <!-- /GA4 -->
   </head>
   <body>
     <div id="root"></div>

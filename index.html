@@ -58,6 +58,19 @@
       "description": "Barbería en Quilpué, especialistas en fades, diseños y barbería masculina."
     }
     </script>
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M2VX335339"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){ dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'G-M2VX335339', {
+        transport_type: 'beacon'
+        // cookie_domain: 'barberiaarteelegante.cl' // normalmente no es necesario declararlo
+      });
+    </script>
+    <!-- /GA4 -->
   </head>
   <body>
     <div id="root"></div>
